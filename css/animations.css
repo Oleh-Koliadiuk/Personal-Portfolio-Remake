@@ -1,0 +1,205 @@
+[data-animate] {
+  opacity: 0;
+  transform: translateY(18px) scale(0.99);
+  transition:
+    opacity 0.8s var(--ease),
+    transform 0.8s var(--ease);
+}
+[data-animate].is-revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.hero-copy > * {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: hero-enter 0.8s var(--ease) forwards;
+}
+.hero-copy .eyebrow {
+  animation-delay: 0.08s;
+}
+.hero-copy h1 {
+  animation-delay: 0.16s;
+}
+.hero-copy .hero-lede {
+  animation-delay: 0.24s;
+}
+.hero-copy .hero-actions {
+  animation-delay: 0.32s;
+}
+.hero-copy .hero-meta {
+  animation-delay: 0.4s;
+}
+.hero-art {
+  opacity: 0;
+  animation: art-enter 1.15s 0.2s var(--ease) forwards;
+}
+.art-card-front {
+  animation: card-float 7s 1.2s ease-in-out infinite;
+}
+.art-card-back {
+  animation: back-float 8s 1.4s ease-in-out infinite;
+}
+.art-orbit.orbit-one {
+  animation: orbit-drift-one 54s linear infinite;
+}
+.art-orbit.orbit-two {
+  animation: orbit-drift-two 72s linear infinite;
+}
+.art-glow {
+  animation: glow-breathe 6s ease-in-out infinite alternate;
+}
+.availability-dot {
+  animation: availability-pulse 2.4s ease-in-out infinite;
+}
+.button-dark {
+  position: relative;
+  overflow: hidden;
+}
+.button-dark::after {
+  content: "";
+  position: absolute;
+  inset: -30% auto -30% -35%;
+  width: 28%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-20deg);
+  animation: button-sheen 6s 2s ease-in-out infinite;
+}
+.art-stamp {
+  animation:
+    stamp-in 0.7s 0.9s var(--ease) both,
+    stamp-float 5s 1.6s ease-in-out infinite;
+}
+.stack-item {
+  transition:
+    background 0.25s,
+    padding 0.25s var(--ease);
+}
+.stack-item:hover {
+  background: rgba(255, 255, 255, 0.55);
+  padding-left: 7px;
+  padding-right: 7px;
+}
+@keyframes hero-enter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes art-enter {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes card-float {
+  0%,
+  100% {
+    transform: rotate(-5deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-4deg) translateY(-8px);
+  }
+}
+@keyframes stamp-in {
+  from {
+    opacity: 0;
+    scale: 0.7;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes stamp-float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -6px;
+  }
+}
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(4px);
+  }
+}
+@keyframes orbit-drift-one {
+  from {
+    transform: rotate(-24deg);
+  }
+  to {
+    transform: rotate(336deg);
+  }
+}
+@keyframes orbit-drift-two {
+  from {
+    transform: rotate(58deg);
+  }
+  to {
+    transform: rotate(418deg);
+  }
+}
+@keyframes back-float {
+  0%,
+  100% {
+    transform: rotate(9deg) translateY(0);
+  }
+  50% {
+    transform: rotate(7deg) translateY(-7px);
+  }
+}
+@keyframes glow-breathe {
+  from {
+    opacity: 0.58;
+    scale: 0.94;
+  }
+  to {
+    opacity: 1;
+    scale: 1.06;
+  }
+}
+@keyframes availability-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 4px rgba(118, 187, 57, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(118, 187, 57, 0.02);
+  }
+}
+@keyframes button-sheen {
+  0%,
+  65% {
+    left: -35%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-animate],
+  .hero-copy > *,
+  .hero-art,
+  .art-card-front,
+  .art-stamp {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+  .art-orbit,
+  .art-glow,
+  .art-card-back,
+  .button-dark::after,
+  .availability-dot {
+    animation: none;
+  }
+}
