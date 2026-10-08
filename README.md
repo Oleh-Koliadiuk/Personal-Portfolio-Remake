@@ -31,13 +31,13 @@ The site uses a clean editorial layout, warm neutral colors, and subtle motion t
 
 ## Built with
 
-| Technology | Use |
-| --- | --- |
-| HTML5 | Semantic page structure and content |
-| CSS3 | Responsive layouts, visual styling, and animations |
-| JavaScript ES modules | Navigation, project-card interactions, scroll progress, and animation setup |
-| Intersection Observer API | Triggering reveal animations as content enters the viewport |
-| Web app manifest | App name, theme colors, and Android icons |
+| Technology                | Use                                                                         |
+| ------------------------- | --------------------------------------------------------------------------- |
+| HTML5                     | Semantic page structure and content                                         |
+| CSS3                      | Responsive layouts, visual styling, and animations                          |
+| JavaScript ES modules     | Navigation, project-card interactions, scroll progress, and animation setup |
+| Intersection Observer API | Triggering reveal animations as content enters the viewport                 |
+| Web app manifest          | App name, theme colors, and Android icons                                   |
 
 ## Project structure
 
