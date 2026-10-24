@@ -53,7 +53,6 @@
 }
 .button-dark {
   position: relative;
-  overflow: hidden;
 }
 .button-dark::after {
   content: "";
@@ -63,11 +62,6 @@
   background: rgba(255, 255, 255, 0.2);
   transform: skewX(-20deg);
   animation: button-sheen 6s 2s ease-in-out infinite;
-}
-.art-stamp {
-  animation:
-    stamp-in 0.7s 0.9s var(--ease) both,
-    stamp-float 5s 1.6s ease-in-out infinite;
 }
 .stack-item {
   transition:
@@ -102,25 +96,6 @@
   }
   50% {
     transform: rotate(-4deg) translateY(-8px);
-  }
-}
-@keyframes stamp-in {
-  from {
-    opacity: 0;
-    scale: 0.7;
-  }
-  to {
-    opacity: 1;
-    scale: 1;
-  }
-}
-@keyframes stamp-float {
-  0%,
-  100% {
-    translate: 0 0;
-  }
-  50% {
-    translate: 0 -6px;
   }
 }
 @keyframes bob {
@@ -189,8 +164,7 @@
   [data-animate],
   .hero-copy > *,
   .hero-art,
-  .art-card-front,
-  .art-stamp {
+  .art-card-front {
     opacity: 1;
     transform: none;
     animation: none;

@@ -41,25 +41,7 @@ export function initUI() {
   if (year) year.textContent = new Date().getFullYear();
 
   const cards = [...document.querySelectorAll("[data-selectable]")];
-  const selectCard = (selectedCard) => {
-    cards.forEach((card) => {
-      const isSelected = card === selectedCard;
-      card.classList.toggle("is-selected", isSelected);
-      card.setAttribute("aria-current", String(isSelected));
-    });
-  };
-
   cards.forEach((card) => {
-    card.addEventListener("click", (event) => {
-      if (!event.target.closest("a")) selectCard(card);
-    });
-    card.addEventListener("keydown", (event) => {
-      if (event.target !== card) return;
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        selectCard(card);
-      }
-    });
     card.addEventListener("pointermove", (event) => {
       const bounds = card.getBoundingClientRect();
       card.style.setProperty("--pointer-x", `${event.clientX - bounds.left}px`);
