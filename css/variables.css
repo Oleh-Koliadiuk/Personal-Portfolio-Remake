@@ -1,0 +1,21 @@
+:root {
+  --ink: #1d1d1f;
+  --muted: #77777d;
+  --paper: #fbfbfd;
+  --soft: #f2f2f5;
+  --line: #e7e7eb;
+  --accent: #b8ff67;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+:root {
+  --ink: #1d2825;
+  --muted: #6e7772;
+  --paper: #faf8f2;
+  --soft: #f0ece2;
+  --line: #e5dfd2;
+  --accent: #dcff75;
+  --accent-strong: #cf5b40;
+}

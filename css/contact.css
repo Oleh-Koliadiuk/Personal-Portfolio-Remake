@@ -1,0 +1,60 @@
+.contact {
+  padding-bottom: 78px;
+}
+
+.contact-inner {
+  position: relative;
+  background: #1e1e21;
+  color: white;
+  border-radius: 21px;
+  min-height: 383px;
+  padding: 54px 60px;
+  isolation: isolate;
+  text-align: center;
+  min-height: 340px;
+  padding: 54px 32px;
+}
+
+.contact-inner .section-kicker {
+  color: #a6a6ad;
+}
+
+.contact-copy {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-inner::before,
+.contact-inner::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 620px;
+  height: 1px;
+  top: 52%;
+  left: 50%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.16),
+    transparent
+  );
+  transform-origin: center;
+  animation: contact-sweep 8s ease-in-out infinite alternate;
+}
+
+.contact-inner::after {
+  transform: rotate(90deg);
+  animation-delay: -4s;
+}
+
+@keyframes contact-sweep {
+  from {
+    translate: -50% -38px;
+    opacity: 0.2;
+  }
+  to {
+    translate: -50% 38px;
+    opacity: 0.8;
+  }
+}

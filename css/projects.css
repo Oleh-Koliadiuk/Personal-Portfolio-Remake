@@ -1,0 +1,113 @@
+.projects {
+  padding-top: 96px;
+  padding-bottom: 112px;
+}
+
+.projects-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.projects-heading .button {
+  margin-bottom: 10px;
+}
+
+.projects-intro {
+  font-size: 12px;
+  color: #86868b;
+  line-height: 1.7;
+  max-width: 400px;
+  margin: 23px 0 28px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 14px;
+}
+
+.project-card {
+  min-height: 285px;
+  background: #f2f2f5;
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition:
+    transform 0.45s var(--ease),
+    background 0.3s,
+    box-shadow 0.45s var(--ease);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  background: #f6f6f8;
+  box-shadow: 0 18px 45px rgba(29, 29, 31, 0.07);
+}
+
+.project-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: 400 8px var(--mono);
+  letter-spacing: 0.05em;
+  color: #8b8b92;
+}
+
+.project-symbol {
+  width: 37px;
+  height: 37px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #dedee3;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.66);
+  font-size: 16px;
+  color: #444;
+}
+
+.project-symbol svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.project-card h3 {
+  font-size: 17px;
+  letter-spacing: -0.055em;
+  margin: 24px 0 9px;
+  word-break: break-word;
+}
+
+.project-card p {
+  font-size: 10px;
+  line-height: 1.8;
+  color: #7d7d84;
+  margin-bottom: 17px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.project-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.project-tag {
+  font: 400 8px var(--mono);
+  padding: 6px 8px;
+  border: 1px solid #dedee3;
+  border-radius: 100px;
+  color: #73737a;
+}
